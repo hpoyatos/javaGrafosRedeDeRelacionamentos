@@ -20,5 +20,15 @@ public class App {
         
         // Exibir grafo
         redeDeRelacionamentos.exibirGrafo();
+
+        System.out.println("");
+
+        Vertice vCaio = new Vertice("Caio Alves Fernandes");
+        redeDeRelacionamentos.adicionarVertice(vCaio);
+        redeDeRelacionamentos.adicionarAresta(vCaio, vArthur);
+
+        // Exibir grafo
+        redeDeRelacionamentos.exibirGrafo();
+
     }
 }
