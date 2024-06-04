@@ -1,11 +1,9 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-
         // Criar três objetos do tipo Vertice (Não são vértice de verdade ainda...)
         Vertice vPoyatos    = new Vertice("Henrique Poyatos");
         Vertice vArthur     = new Vertice("Arthur Maestri");
-        Vertice vIsadora    = new Vertice("Isadora Ribeiro Eugênio");
+        Vertice vIsadora    = new Vertice("Isadora Rodrigues");
         
         // Criar o grafo
         Grafo redeDeRelacionamentos = new Grafo();
@@ -15,5 +13,12 @@ public class App {
         redeDeRelacionamentos.adicionarVertice(vArthur);
         redeDeRelacionamentos.adicionarVertice(vIsadora);
         
+        // Criando as três arestas do "triângulo da amizade"
+        redeDeRelacionamentos.adicionarAresta(vPoyatos, vArthur);
+        redeDeRelacionamentos.adicionarAresta(vArthur, vIsadora);
+        redeDeRelacionamentos.adicionarAresta(vIsadora, vPoyatos);
+        
+        // Exibir grafo
+        redeDeRelacionamentos.exibirGrafo();
     }
 }
